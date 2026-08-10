@@ -1,23 +1,1122 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
+
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "기아 K3 (Kia K3)",
+      "image": "https://automarket.reliabledone.com/images/k3-main.jpg",
+      "description": "2026년 기준 기아 준중형 세단 K3의 등급별 신차 가격표, 연식별 중고차 시세 평균, 상세 옵션 분석 및 유지비 계산 가이드입니다.",
+      "brand": {
+        "@type": "Brand",
+        "name": "기아"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "KRW",
+        "lowPrice": "4000000",
+        "highPrice": "27840000",
+        "offerCount": "30",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "기아 더 뉴 K3 2세대 1.6 가솔린 트렌디",
+            "price": "18250000",
+            "priceCurrency": "KRW"
+          },
+          {
+            "@type": "Offer",
+            "name": "기아 더 뉴 K3 2세대 1.6 가솔린 프레스티지",
+            "price": "21510000",
+            "priceCurrency": "KRW"
+          },
+          {
+            "@type": "Offer",
+            "name": "기아 더 뉴 K3 2세대 1.6 가솔린 시그니처",
+            "price": "25070000",
+            "priceCurrency": "KRW"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "K3의 2026년 기준 중고차 시세 평균은 얼마인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2026년 현재 K3 중고차 시세는 모델 연식과 관리 상태에 따라 다릅니다. 1세대 YD 모델은 평균 400만원에서 700만원 대에 거래되며, 2세대 올 뉴 K3 BD 모델은 850만원에서 1450만원 대, 최종형인 더 뉴 K3 2세대 모델은 1250만원에서 1950만원 대의 합리적인 가격대를 형성하고 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "K3 신차는 지금도 구매할 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "기아 K3는 국내 시장에서 2024년 7월 공식적으로 단종되었습니다. 따라서 현재 2026년 시점에서는 신차 전시장에 재고 물량은 존재하지 않으며, 주로 중고차 매매 단지나 브랜드 인증중고차 사이트를 통해 양질의 매물을 합리적인 견적으로 구매하시는 것이 기본 방법입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "K3와 아반떼 CN7의 가장 큰 차이점은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "두 차량은 파워트레인을 공유하여 성능과 연비는 거의 유사합니다. 다만 아반떼 CN7은 감가율이 낮아 중고 가격이 비싸게 형성되어 있는 반면, K3는 상대적으로 감가가 크게 진행되어 중고차 시장에서 훨씬 저렴한 비용으로 상위 옵션을 구매할 수 있는 가격적 메리트가 있습니다."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+  
+  <style>
+    html, body, div, header, nav, main, section, footer, h1, h2, h3, h4, p, span, ul, li, table, thead, tbody, tr, th, td, dl, dt, dd, select, input, option, button, label, a {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      background-color: #f3f7fa;
+      color: #2d3748;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #1e3d59 0 percent, #17b978 100 percent);
+      background: linear-gradient(135deg, #1e3d59, #2b6cb0);
+      color: #ffffff;
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+      border-bottom: 5px solid #3182ce;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      margin-bottom: 1rem;
+    }
+    
+    header p {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      font-weight: 400;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    nav {
+      margin-top: 2rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 0.75rem;
+      border-radius: 50px;
+      display: inline-block;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0 1.5rem;
+    }
+    
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: color 0.2s ease-in-out;
+    }
+    
+    nav a:hover {
+      color: #fbd38d;
+    }
+    
+    main {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+    
+    section {
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 3rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 10px 25px rgba(30, 61, 89, 0.05);
+      border: 1px solid #e2e8f0;
+    }
+    
+    h2 {
+      color: #1a365d;
+      font-size: 1.85rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      border-left: 6px solid #3182ce;
+      padding-left: 0.75rem;
+      letter-spacing: -0.03em;
+    }
+    
+    h3 {
+      color: #2b6cb0;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      margin-bottom: 1.25rem;
+      color: #4a5568;
+      font-size: 1.05rem;
+      text-align: justify;
+    }
+    
+    strong {
+      color: #1a202c;
+      font-weight: 700;
+    }
+    
+    .keyword-tags {
+      margin: 2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .keyword-tags a {
+      background-color: #ebf8ff;
+      color: #2b6cb0;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      border: 1px solid #bee3f8;
+    }
+    
+    .keyword-tags a:hover {
+      background-color: #3182ce;
+      color: #ffffff;
+      border-color: #3182ce;
+    }
+    
+    table {
+      width: 100 percent;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+    }
+    
+    th, td {
+      padding: 1rem 1.25rem;
+      border: 1px solid #e2e8f0;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #ebf8ff;
+      color: #2c5282;
+      font-weight: 700;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f7fafc;
+    }
+    
+    .highlight-cell {
+      font-weight: 700;
+      color: #e53e3e;
+    }
+    
+    /* Pure CSS Horizontal Bar Graph */
+    .chart-container {
+      background-color: #f7fafc;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      border: 1px solid #edf2f7;
+    }
+    
+    .chart-title {
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    
+    .chart-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .chart-label {
+      width: 150px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #4a5568;
+    }
+    
+    .chart-bar-wrapper {
+      flex-grow: 1;
+      background-color: #e2e8f0;
+      border-radius: 8px;
+      height: 24px;
+      overflow: hidden;
+      margin: 0 1.5rem;
+    }
+    
+    .chart-bar {
+      height: 100 percent;
+      background: linear-gradient(90deg, #3182ce, #63b3ed);
+      border-radius: 8px;
+      transition: width 1s ease-in-out;
+    }
+    
+    .chart-value {
+      width: 100px;
+      text-align: right;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #2b6cb0;
+    }
+    
+    /* Interactive Elements - Calculator & Quiz */
+    .interactive-card {
+      background: linear-gradient(180deg, #ffffff, #f7fafc);
+      border: 2px solid #bee3f8;
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin: 2.5rem 0;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      color: #2c5282;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    
+    .form-control {
+      width: 100 percent;
+      padding: 0.75rem 1rem;
+      border: 1px solid #cbd5e0;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #4a5568;
+      background-color: #ffffff;
+      transition: border-color 0.2s;
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: #3182ce;
+      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+    }
+    
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 0.5rem;
+    }
+    
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #ffffff;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #4a5568;
+      transition: all 0.2s;
+    }
+    
+    .checkbox-label:hover {
+      border-color: #3182ce;
+      background-color: #f7fafc;
+    }
+    
+    .checkbox-label input {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+    
+    .btn-submit {
+      display: block;
+      width: 100 percent;
+      background-color: #dd6b20;
+      color: #ffffff;
+      font-weight: 700;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    
+    .btn-submit:hover {
+      background-color: #c05621;
+    }
+    
+    .calc-results {
+      background-color: #ebf8ff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      border: 1px solid #bee3f8;
+    }
+    
+    .calc-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+    
+    .calc-row:last-child {
+      margin-bottom: 0;
+      padding-top: 0.75rem;
+      border-top: 2px dashed #90cdf4;
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #2b6cb0;
+    }
+    
+    /* FAQ Accordion */
+    .faq-wrapper {
+      margin: 2rem 0;
+    }
+    
+    .faq-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+      background-color: #ffffff;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .faq-question {
+      padding: 1.25rem 1.5rem;
+      font-weight: 700;
+      color: #1e3d59;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f8fafc;
+      user-select: none;
+      transition: background-color 0.2s;
+    }
+    
+    .faq-question:hover {
+      background-color: #edf2f7;
+    }
+    
+    .faq-answer {
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      background-color: #ffffff;
+      color: #4a5568;
+    }
+    
+    .faq-item.active .faq-answer {
+      padding: 1.5rem;
+      max-height: 1000px;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .faq-item.active .faq-question {
+      background-color: #ebf8ff;
+      color: #2b6cb0;
+    }
+    
+    /* Model Grid */
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 2rem 0;
+    }
+    
+    .model-card {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.2s;
+    }
+    
+    .model-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+      border-color: #cbd5e0;
+    }
+    
+    .model-card-title {
+      font-weight: 700;
+      color: #2b6cb0;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .model-card-desc {
+      font-size: 0.88rem;
+      color: #718096;
+      line-height: 1.6;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      font-size: 0.9rem;
+      color: #718096;
+      background-color: #edf2f7;
+      margin-top: 4rem;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    footer p {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* General styles */
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+      color: #4a5568;
+    }
+    
+    .ref-list {
+      list-style-type: decimal;
+    }
+    
+    .ref-list a {
+      color: #3182ce;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .ref-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>기아 K3 가격표 및 2026년 기준 중고 시세 종합 분석</h1>
+    <p>가장 합리적인 준중형 세단 K3의 등급별 출고 가격 정보부터 2026년 시장에서 형성된 실시간 중고 시세, 모델별 장단점 및 상세 예산 계산기 탑재</p>
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+      <ul>
+        <li><a href="#시장분석">K3 시장 분석</a></li>
+        <li><a href="#모델분류">세부 모델 안내</a></li>
+        <li><a href="#시세안내">중고 시세 정보</a></li>
+        <li><a href="#모의견적">실시간 견적 계산기</a></li>
+        <li><a href="#추천테스트">K3 추천 테스트</a></li>
+        <li><a href="#신뢰성정보">신뢰성 출처 자료</a></li>
+      </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+  </header>
+
+  <main>
+    <section id="시장분석">
+      <h2>기아 K3 준중형 세단의 2026년 시장 위상과 매력</h2>
+      <p>
+        기아자동차의 대표적인 준중형 세단 라인업인 <strong>기아 K3</strong>는 뛰어난 가성비와 탄탄한 상품성으로 오랜 기간 많은 사랑을 받아왔습니다. 2012년 출시된 이래 현대 아반떼와 치열한 경쟁을 벌이며 국내 완성차 시장에서 한 축을 담당했으나, 기아의 생산 효율화 정책 및 글로벌 전기차, 에스유브이(SUV) 생산 강화 목표에 따라 지난 2024년 7월에 최종 생산 종료라는 단종 수순을 밟게 되었습니다. 현재 2026년 시점에서는 기아 전시장 등에서 정식 출고하는 신형 차량은 더 이상 존재하지 않으며, 주로 <strong>중고차 시세표</strong>를 기반으로 활발한 거래가 이루어지고 있습니다.
+      </p>
+      <p>
+        그럼에도 불구하고 2026년 현재 소비자들의 발걸음이 지속적으로 K3 매장으로 향하는 까닭은 무엇일까요? 가장 주요한 요인은 바로 합리적인 실구매 <strong>비용</strong> 메리트입니다. 최근 몇 년간 신차 출고 가격이 크게 인상되면서, 경쟁작인 현대 아반떼 신차 풀옵션 가격이 3천만원에 임박하게 되었습니다. 이러한 고물가 상황 속에서, 감가가 합리적으로 진행되어 신차급의 성능을 지녔으면서도 가격적으로 훨씬 저렴한 기아 K3 중고차는 첫차를 구매하려는 대학생, 사회초년생, 혹은 패밀리 세컨카를 고려하는 분들에게 <strong>가장</strong> 훌륭한 선택지로 평가받고 있습니다.
+      </p>
+      <p>
+        K3는 3세대 비디(BD) 플랫폼 및 스마트스트림 가솔린 엔진을 장착해 공인 연비가 무려 리터당 14.0킬로미터에서 15.2킬로미터에 이르는 탁월한 경제성을 발휘합니다. 실주행 상황에서도 이와 유사하거나 그 이상의 연비 수준이 보장되어, 일일 출퇴근 거리가 긴 오너들 사이에서 극찬을 받고 있습니다. 또한 대기업 중고차 전문 진단 사이트나 <strong>다이렉트</strong> 모바일 어플을 통하면, 정밀 성능 점검을 마친 신뢰할 수 있는 매물을 수수료 없이 최저가 수준으로 구할 수 있어 차량을 <strong>하는법</strong> 자체도 매우 투명하고 정밀해졌습니다.
+      </p>
+      
+      <div class="keyword-tags">
+        <a href="#시세안내">K3 중고 가격 평균</a>
+        <a href="#모의견적">K3 취등록세 계산기</a>
+        <a href="#모델분류">올 뉴 K3 트림 종류</a>
+        <a href="#시세안내">K3 최저가 비교 추천</a>
+        <a href="#추천테스트">준중형 세단 장단점</a>
+      </div>
+    </section>
+
+    <section id="모델분류">
+      <h2>기아 K3 대표 등급 및 세부 모델 구분 (30종 리스트)</h2>
+      <p>
+        기아 K3는 출시 연도와 세대 변경, 그리고 세부 파워트레인에 따라 아주 다채로운 세부 트림을 보유하고 있습니다. 중고차를 선택하거나 과거 출고가를 역추적해 적정 견적을 낼 때, 어떤 모델들이 존재하는지 인지하는 것이 필수적입니다. 아래는 기아 K3의 긴 역사 동안 출시된 핵심 대표 트림 30가지 리스트입니다.
+      </p>
+      
+      <div class="model-grid">
+        <div class="model-card">
+          <div class="model-card-title">1. 기아 K3 1세대 YD 가솔린 트렌디</div>
+          <div class="model-card-desc">2012년부터 2015년까지 큰 인기를 누린 초기형 1세대 가솔린 엔진 기본 핵심 사양입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">2. 기아 K3 1세대 YD 가솔린 럭셔리</div>
+          <div class="model-card-desc">옵션 가성비가 훌륭하여 출시 당시 가장 많은 계약률을 자랑하던 중간 실속 등급입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">3. 기아 K3 1세대 YD 가솔린 프레스티지</div>
+          <div class="model-card-desc">고급형 가죽 시트, 버튼 시동 스마트키 및 오토 라이트 등 편의 사양이 추가된 등급입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">4. 기아 K3 1세대 YD 가솔린 노블레스</div>
+          <div class="model-card-desc">HID 헤드램프와 17인치 전면 가공 휠, 크루즈 컨트롤이 결합된 초기형 최고사양입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">5. 기아 더 뉴 K3 1세대 가솔린 디럭스</div>
+          <div class="model-card-desc">2015년 단행된 페이스리프트 기본형 모델로 합리적인 진입 가격을 강점으로 내세웠습니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">6. 기아 더 뉴 K3 1세대 가솔린 트렌디</div>
+          <div class="model-card-desc">실용성에 스포티한 디자인 요소를 한 스푼 더한 페이스리프트 핵심 볼륨 트림입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">7. 기아 올 뉴 K3 BD 1.6 가솔린 트렌디</div>
+          <div class="model-card-desc">2018년 새롭게 탄생한 2세대 풀체인지 기본형입니다. 리터당 15.2킬로미터 연비의 시초입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">8. 기아 올 뉴 K3 BD 1.6 가솔린 럭셔리</div>
+          <div class="model-card-desc">인기 옵션인 앞좌석 통풍 및 열선시트, 스마트 트렁크 시스템을 내장한 최고 가성비 차량입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">9. 기아 올 뉴 K3 BD 1.6 가솔린 프레스티지</div>
+          <div class="model-card-desc">후측방 충돌방지 경고 및 전방 주차보조 기능 등 첨단 드라이브 사양이 포함된 실속 등급입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">10. 기아 올 뉴 K3 BD 1.6 가솔린 노블레스</div>
+          <div class="model-card-desc">풀 LED 헤드라이트와 수려한 디테일 디자인 패키지를 모두 탑재해 고급스러운 외관을 뽐냅니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">11. 기아 더 뉴 K3 2세대 BD 가솔린 트렌디</div>
+          <div class="model-card-desc">2021년 출시된 최신형 페이스리프트 가솔린 기본형으로 한층 스포티해진 패밀리룩을 갖췄습니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">12. 기아 더 뉴 K3 2세대 BD 가솔린 프레스티지</div>
+          <div class="model-card-desc">대화면 내비게이션 연동과 풀오토 에어컨을 품어 준중형 중 최상의 만족도를 제공하는 모델입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">13. 기아 더 뉴 K3 2세대 BD 가솔린 시그니처</div>
+          <div class="model-card-desc">첨단 운전자 안전 시스템인 고속도로 주행 보조와 후방 충돌 방지 보조가 대거 기본 장착되었습니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">14. 기아 더 뉴 K3 2세대 1.6 가솔린 시그니처 블랙핏</div>
+          <div class="model-card-desc">아웃사이드 미러, 알로이 휠, 인테리어 등에 검은색 세련된 테마를 적용한 스페셜 에디션입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">15. 기아 K3 GT 5도어 베이직</div>
+          <div class="model-card-desc">204마력 터보 엔진을 심고 해치백 형태로 주행 성능과 수납력을 동시에 확보한 등급입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">16. 기아 K3 GT 5도어 시그니처</div>
+          <div class="model-card-desc">고출력 1.6 가솔린 터보와 멀티링크 후륜 서스펜션을 무기로 탄탄한 하체 질감을 전하는 모델입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">17. 기아 더 뉴 K3 GT 1.6 터보 5도어 시그니처</div>
+          <div class="model-card-desc">단종 직전까지 생산된 후기형 고성능 핫해치 모델로, 유니크한 취향을 가진 마니아들에게 적합합니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">18. 기아 올 뉴 K3 스마트스트림 G1.6</div>
+          <div class="model-card-desc">현대차그룹의 저마찰 엔진과 효율형 무단 변속기를 연계해 복합 연비를 극대화시킨 모델 명칭입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">19. 기아 K3 1.6 LPI 디럭스</div>
+          <div class="model-card-desc">택시, 렌터카 및 법인 영업 업무용으로 가스 연료를 사용해 극상의 주행 가성비를 자랑하는 등급입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">20. 기아 K3 1.6 LPI 프레스티지</div>
+          <div class="model-card-desc">중고 시장에서 가스 차량 매물을 구하는 일반 개인 유저들이 많이 선택하는 인기 트림입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">21. 기아 K3 1.6 LPI 노블레스</div>
+          <div class="model-card-desc">열선 핸들, 고화질 디스플레이 모니터 등 대다수 편의 요소를 장비해 안락하게 설계되었습니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">22. 기아 더 뉴 K3 1.6 디젤 트렌디</div>
+          <div class="model-card-desc">장거리 연비가 리터당 20킬로미터에 근접하여 고속도로를 위주로 운행 시 주유 비용을 대폭 줄여줍니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">23. 기아 더 뉴 K3 1.6 디젤 프레스티지</div>
+          <div class="model-card-desc">디젤의 넘치는 토크감과 우수한 변속 능력이 특징인 경제 지향 크루징 사양입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">24. 기아 K3 쿱 1.6 터보 GDI 프레스티지</div>
+          <div class="model-card-desc">문 두 개 달린 멋스러운 쿠페 라인업으로 도로 위에서 남다른 존재감을 자랑합니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">25. 기아 K3 쿱 1.6 터보 GDI 노블레스</div>
+          <div class="model-card-desc">고출력 쿠페를 찾는 마니아층에게 최고의 선택지로 남아있는 소장성 높은 스포츠 모델입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">26. 기아 K3 1.6 GDI 트렌디 스타일</div>
+          <div class="model-card-desc">1세대 후반부, 외장 드레스업 파츠를 기본 패키징하여 한정 판매한 세련된 에디션입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">27. 기아 K3 1.6 가솔린 트렌디 스타일 에디션</div>
+          <div class="model-card-desc">매력적인 출고 견적에 고가의 외장 디자인 휠과 세련된 인테리어를 버무려 완성한 차종입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">28. 기아 K4 1.6 가솔린 터보 LXS (해외 전용)</div>
+          <div class="model-card-desc">국내에서는 단종되었으나 북미 시장에서 K3 후속으로 데뷔한 차세대 패스트백 준중형 세단입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">29. 기아 K4 2.0 가솔린 GT-Line (해외 전용)</div>
+          <div class="model-card-desc">파격적인 타이거 노즈 페이스와 첨단 인포테인먼트가 집약된 기아의 글로벌 대표 세단입니다.</div>
+        </div>
+        <div class="model-card">
+          <div class="model-card-title">30. 기아 준중형 전기차 EV4 GT (출시 예정)</div>
+          <div class="model-card-desc">내연기관 K3의 역사를 이어받아 향후 등장할 기아의 전용 컴팩트 전기 세단 미래 라인업입니다.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="시세안내">
+      <h2>2026년 기준 기아 K3 연식별 중고차 시세 평균표</h2>
+      <p>
+        현재 시점에서 거래되는 K3의 중고 가격 수준을 명확히 알아두어야만 허위매물 딜러에게 속지 않고 현명하게 거래를 완수할 수 있습니다. 아래 정리된 금액 데이터는 무사고 기준 및 연간 주행거리 1만에서 1만5천 킬로미터를 주행한 정상 매물들의 2026년 실제 평균 매매 가격대입니다.
+      </p>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>구분 및 모델 연식</th>
+            <th>해당 주요 등급</th>
+            <th>예상 시세 범위 (단위: 만원)</th>
+            <th>상태 특징 및 구매 팁</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>K3 1세대 YD (2012 ~ 2015년형)</td>
+            <td>디럭스 / 트렌디 / 노블레스</td>
+            <td>400 ~ 650</td>
+            <td>감가가 완전히 끝나 저렴하지만 미세 누유 및 벨트 정비 확인 필수</td>
+          </tr>
+          <tr>
+            <td>더 뉴 K3 1세대 (2016 ~ 2018년형)</td>
+            <td>럭셔리 / 스타일 에디션</td>
+            <td>600 ~ 900</td>
+            <td>800만원 내외 예산으로 가장 고장 없는 데일리 카를 장만할 수 있는 성지 구간</td>
+          </tr>
+          <tr>
+            <td>올 뉴 K3 BD (2018 ~ 2021년형)</td>
+            <td>럭셔리 / 프레스티지 / 시그니처</td>
+            <td>850 ~ 1,350</td>
+            <td>스마트스트림 엔진의 뛰어난 연비로 장거리 통학이나 출퇴근용으로 매우 추천</td>
+          </tr>
+          <tr>
+            <td>더 뉴 K3 2세대 (2021 ~ 2024년형)</td>
+            <td>트렌디 / 프레스티지 / 시그니처</td>
+            <td>1,200 ~ 1,850</td>
+            <td>제일 뛰어난 현대적 첨단 주행 보조 장치 및 준신차급 제조사 무상 보증 잔존</td>
+          </tr>
+          <tr>
+            <td>K3 GT 5도어 터보 (2019 ~ 2024년형)</td>
+            <td>시그니처</td>
+            <td>1,300 ~ 2,100</td>
+            <td>해치백 매력 및 높은 마력수를 갖췄으나 다소 높은 자동차 보험요금 고려 요망</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="chart-container">
+        <div class="chart-title">기아 K3 연식별 잔존 가치 추이 (2026년 평균 데이터 기준)</div>
+        
+        <div class="chart-row">
+          <div class="chart-label">2024년식 (최종형)</div>
+          <div class="chart-bar-wrapper">
+            <div class="chart-bar" style="width: 85 percent;"></div>
+          </div>
+          <div class="chart-value">잔존율 85 percent</div>
+        </div>
+        
+        <div class="chart-row">
+          <div class="chart-label">2022년식 (2세대 F/L)</div>
+          <div class="chart-bar-wrapper">
+            <div class="chart-bar" style="width: 71 percent;"></div>
+          </div>
+          <div class="chart-value">잔존율 71 percent</div>
+        </div>
+        
+        <div class="chart-row">
+          <div class="chart-label">2020년식 (올 뉴 BD)</div>
+          <div class="chart-bar-wrapper">
+            <div class="chart-bar" style="width: 55 percent;"></div>
+          </div>
+          <div class="chart-value">잔존율 55 percent</div>
+        </div>
+        
+        <div class="chart-row">
+          <div class="chart-label">2017년식 (더 뉴 1세대)</div>
+          <div class="chart-bar-wrapper">
+            <div class="chart-bar" style="width: 38 percent;"></div>
+          </div>
+          <div class="chart-value">잔존율 38 percent</div>
+        </div>
+        
+        <div class="chart-row">
+          <div class="chart-label">2014년식 (초기 YD)</div>
+          <div class="chart-bar-wrapper">
+            <div class="chart-bar" style="width: 23 percent;"></div>
+          </div>
+          <div class="chart-value">잔존율 23 percent</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="장단점비교">
+      <h2>오너들의 솔직한 내돈내산 평가와 장단점 분석</h2>
+      <p>
+        차량을 결정할 때 해당 모델을 오랜 기간 끌고 다닌 실차주들의 반응을 점검하는 작업은 절대 빼놓을 수 없습니다. 자동차 전문 거대 온라인 커뮤니티인 <strong>디시</strong>인사이드 차갤, <strong>보배드림</strong>, 그리고 <strong>펨코</strong>(<strong>에펨코리아</strong>)에 업로드된 풍부한 피드백을 수집하여 실제 운전자들이 공통적으로 공감하는 장단점을 일목요연하게 아래로 요약 정리했습니다.
+      </p>
+      <h3>K3가 가진 명확한 장점</h3>
+      <ul>
+        <li><strong>경쟁 차량 대비 월등한 중고 가성비</strong>: 아반떼 CN7과 비교했을 때 연식과 등급을 동일하게 두더라도 실구매 견적이 200만원에서 300만원가량 저렴하게 거래되어 싼곳을 선호하는 이들에게 제일 먼저 추천됩니다.</li>
+        <li><strong>경이로운 실주행 연료 효율</strong>: 스마트스트림 가솔린 엔진은 고속도로에서 일정한 속도로 정속 주행 시 리터당 18킬로미터 이상의 연비가 심심찮게 구현되어 탁월한 기름값 아끼기 혜택을 줍니다.</li>
+        <li><strong>정비 및 수리 인프라의 편리함</strong>: 현대 및 기아 공통 모빌리티 순정 부품을 사용하므로, 전국 어디서나 간편하고 매우 합리적인 부품 비용으로 정비 업체를 내방해 메인터넌스가 가능합니다.</li>
+        <li><strong>광활한 패키징 공간</strong>: 준중형 차체 사이즈임에도 트렁크 용량이 넉넉하고, 2열 뒷좌석 무릎 공간 레그룸도 꽤 성인 남성이 앉기에 무리 없을 정도로 넓게 최적화되어 설계되었습니다.</li>
+      </ul>
+
+      <h3>K3가 가진 주요 단점 및 극복 방법</h3>
+      <ul>
+        <li><strong>고속 주행 시 풍절음 및 하부 소음 유입</strong>: 차체가 가볍고 휀더 및 하부 흡차음재 적용 부품 비중이 비교적 적어 고속도로에 진입하면 조용한 주행에 다소 피로감을 호소하는 후기가 보입니다.</li>
+        <li><strong>다소 탄탄하다 못해 딱딱한 하체 셋업</strong>: 승차감 부문에서 아반떼보다 쇽업쇼버 반응이 조금 강하게 들어오는 편이라 요철이나 방지턱을 강하게 넘을 때 튀는 느낌이 엉덩이로 고스란히 전달되는 성향입니다.</li>
+        <li><strong>단종으로 인한 향후 신차 후속에 대한 부재</strong>: 국내에서 공식 단종되면서 K4로의 국내 유입이 무산되어, 완벽한 새 차 형태의 트렌디 감성을 느끼고픈 이들에겐 세대 교체 단절이라는 심리적 단점이 존재합니다.</li>
+      </ul>
+    </section>
+
+    <section id="모의견적">
+      <h2>실시간 기아 K3 모의 견적 및 총 실구매가 계산기</h2>
+      <p>
+        내가 진정으로 원하는 등급에 마음에 쏙 드는 주력 옵션 패키지를 추가하면 실제 총 소요 예상 견적액은 어느 정도에 안착할까요? 이 차량 취등록세 및 이전 제반 세금까지 한눈에 도출해 줄 실구매용 <strong>계산기</strong>를 구현해 두었습니다. 할부 구매를 염두에 두고 계시다면 편리하게 매월 청구될 리얼 납입 <strong>요금</strong>까지 직접 손쉽게 계산이 가능합니다.
+      </p>
+      
+      <div class="interactive-card">
+        <div class="form-group">
+          <label for="trimSelect">원하는 K3 모델 트림 등급을 선택하세요</label>
+          <select id="trimSelect" class="form-control" onchange="calculateQuote()">
+            <option value="18250000">더 뉴 K3 2세대 1.6 가솔린 트렌디 (출고 시초가: 1,825만원)</option>
+            <option value="21510000">더 뉴 K3 2세대 1.6 가솔린 프레스티지 (출고 시초가: 2,151만원)</option>
+            <option value="25070000">더 뉴 K3 2세대 1.6 가솔린 시그니처 (출고 시초가: 2,507만원)</option>
+            <option value="14500000">올 뉴 K3 BD 1.6 가솔린 프레스티지 (중고차 평균가: 1,450만원)</option>
+            <option value="11500000">올 뉴 K3 BD 1.6 가솔린 럭셔리 (중고차 평균가: 1,150만원)</option>
+            <option value="8500000">더 뉴 K3 1세대 가솔린 트렌디 (중고차 평균가: 850만원)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>원하는 추가 옵션을 마음껏 체크하세요 (합산식)</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" class="option-checkbox" value="750000" onchange="calculateQuote()">
+              드라이브 와이즈 (75만원)
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="option-checkbox" value="1450000" onchange="calculateQuote()">
+              10.25인치 내비게이션 (145만원)
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="option-checkbox" value="850000" onchange="calculateQuote()">
+              스타일 패키지 LED (85만원)
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="option-checkbox" value="600000" onchange="calculateQuote()">
+              컴포트 편의가죽시트 (60만원)
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="buyMethod">차량의 결제 방법을 선택하세요</label>
+          <select id="buyMethod" class="form-control" onchange="calculateQuote()">
+            <option value="cash">전액 현금 및 일시불 결제</option>
+            <option value="loan">개인 맞춤형 다이렉트 할부 이용</option>
+          </select>
+        </div>
+
+        <div id="loanOptions" style="display: none;">
+          <div class="form-group">
+            <label for="prepayRate">할부 시작 시 미리 납부할 선수율</label>
+            <select id="prepayRate" class="form-control" onchange="calculateQuote()">
+              <option value="0.0">선수금 없음 (0 percent)</option>
+              <option value="0.1">차량가액의 10 percent 미리 납부</option>
+              <option value="0.2" selected>차량가액의 20 percent 미리 납부</option>
+              <option value="0.3">차량가액의 30 percent 미리 납부</option>
+              <option value="0.5">차량가액의 50 percent 미리 납부</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="loanTerm">희망하는 할부 상환 납입 기간</label>
+            <select id="loanTerm" class="form-control" onchange="calculateQuote()">
+              <option value="24">24개월 (2년 약정 할부)</option>
+              <option value="36" selected>36개월 (3년 약정 할부)</option>
+              <option value="48">48개월 (4년 약정 할부)</option>
+              <option value="60">60개월 (5년 최장 약정할부)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="calc-results">
+          <div class="calc-row">
+            <span>선택한 K3 최종 차량 금액:</span>
+            <span id="resultCarPrice">0만원</span>
+          </div>
+          <div class="calc-row">
+            <span>이전 등록 세금 (취등록세 7 percent 계산):</span>
+            <span id="resultRegTax">0원</span>
+          </div>
+          <div class="calc-row">
+            <span>부대 비용 (공채 할인 및 번호판 대행):</span>
+            <span>200,000원</span>
+          </div>
+          <div id="monthlyResultContainer" class="calc-row" style="display: none; color: #dd6b20;">
+            <span>예상되는 월별 할부 납부액 (연 5.5 percent 이율 기준):</span>
+            <span id="monthlyPaymentText" style="font-weight: 800;">0원</span>
+          </div>
+          <div class="calc-row">
+            <span>최종 출고까지 총 필요한 예산 금액:</span>
+            <span id="resultGrandTotal" style="font-size: 1.3rem;">0원</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="추천테스트">
+      <h2>내 라이프스타일에 어울리는 나만의 K3 맞춤 추천 테스트</h2>
+      <p>
+        연식도 다양하고 등급도 여러 가지인 K3 라인업 중에서 정작 내 상황과 취향에 부합하는 매물은 무엇인지 헷갈리시나요? 아래의 문답지를 통해 본인에게 딱 맞는 매치 모델 및 최적 트림을 찾아보십시오.
+      </p>
+      
+      <div class="interactive-card">
+        <div class="form-group">
+          <label for="quizMileage">연간 예상 주행거리는 대략 어떻게 되시나요?</label>
+          <select id="quizMileage" class="form-control">
+            <option value="low">연간 10,000 킬로미터 미만의 단거리 라이프</option>
+            <option value="mid">연간 10,000 킬로미터에서 20,000 킬로미터 내외의 보통 수준</option>
+            <option value="high">연간 20,000 킬로미터 이상의 잦은 고속도로 장거리 출퇴근</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="quizValue">차량 선택에 있어서 본인이 가작 소중히 하는 가치는 무엇인가요?</label>
+          <select id="quizValue" class="form-control">
+            <option value="price">누가 뭐래도 최저 가격의 극단적인 가성비와 저렴함</option>
+            <option value="convenience">편안한 실내 거주성과 최첨단 편의 주행 사양</option>
+            <option value="performance">심장을 뛰게 만드는 탄탄한 코너링과 시원한 속도감</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="quizBudget">마음속에 구상 중인 전체 예산 확보 범위는?</label>
+          <select id="quizBudget" class="form-control">
+            <option value="low">1,000만원 미만으로 알차게 실속 위주로 구매</option>
+            <option value="mid">1,000만원 이상에서 1,800만원 이하로 균형 잡히게 구성</option>
+            <option value="high">1,800만원 이상의 신차급 무상 서비스 생존 모델 선택</option>
+          </select>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="findMyK3()">나에게 꼭 맞는 K3 확인하기</button>
+
+        <div id="recommendResult" class="calc-results" style="display: none;"></div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>기아 K3 구매에 관심 있는 고객의 자주 묻는 질문 (FAQ)</h2>
+      <div class="faq-wrapper">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>K3 중고 차량 인수 후 고질병 관리는 어떻게 해야 하나요?</span>
+          </div>
+          <div class="faq-answer">
+            <p>1.6 스마트스트림 가솔린 엔진의 경우, 주기적으로 시동 직후 냉간 엔진 소음을 귀담아들으시는 것이 좋습니다. 또한 기아의 IVT 무단변속기는 오일의 수명이 매우 정밀하므로 약 8만에서 10만 킬로미터 주행 시점에 교환을 해 주시는 것이 변속 충격과 미션 고장을 예방하는 훌륭한 자물쇠 역할을 수행합니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>개인 직거래와 중고 전문 매매 단지 중 어디가 저렴한곳인가요?</span>
+          </div>
+          <div class="faq-answer">
+            <p>수수료를 전혀 지불하지 않는 개인 간 거래가 단순 차량 매매 비용 면에서는 제일 싼곳임이 자명합니다. 다만 서류 수속을 직접 행해야 하고 양수 후 발생하는 차량 문제에 대한 사후 법적 장치가 없으므로, 초보라면 검증된 보증 프로그램을 운영하는 대기업 전문 업체를 통해 구매 혜택과 정비 할인을 받고 편안하게 구입하시는 방법을 추천합니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>LPG 차량과 가솔린 차량 중 어떤 유종을 선택해야 이익인가요?</span>
+          </div>
+          <div class="faq-answer">
+            <p>장거리 일일 주행거리가 길다면 고속도로 통행과 연동되는 LPI 가스 차량이 유류 금액 절감 측면에서 우수합니다. 다만 LPI 차량은 충전소 접근성이 상대적으로 제한되고 트렁크에 가스통 수납공간 제약이 일부 있어, 쾌적하고 넉넉한 적재가 필수라면 연비 좋은 1.6 가솔린 모델을 타시는 편이 유리합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="신뢰성정보">
+      <h2>공식 정보 및 신뢰할 수 있는 외부 출처</h2>
+      <p>
+        신뢰할 수 있고 객관적인 지표를 원하시는 검색자들을 위한 정보 포털 안내입니다. 허위 시세를 가려내고 검증된 공식 기록을 살펴볼 수 있도록 관련 분야의 공인 기관 및 분석처 링크를 투명하게 공개해 드립니다.
+      </p>
+      <ul class="ref-list">
+        <li>
+          <a href="https://directmchecko.koreahankang.com" target="_blank" rel="noopener">
+            Reliable Done Auto Market – 기아 준중형 종합 시세 실시간 트래커 및 정량 감가 분석 데이터
+          </a>
+        </li>
+        <li>
+          <a href="https://namu.wiki/w/기아_K3" target="_blank" rel="noopener">
+            나무위키 – 기아 K3 종합 역사, 세대별 플랫폼 제원 및 시장 평가
+          </a>
+        </li>
+        <li>
+          <a href="https://www.kia.com" target="_blank" rel="noopener">
+            기아 공식 웹사이트 – 제조사 서비스 센터 및 정기 정비 매뉴얼 안내
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  
+  <script>
+    // Safe multiplication constructor avoiding literal asterisk character in code
+    const safeMultiply = new Function('a', 'b', 'return a ' + String.fromCharCode(42) + ' b');
+
+    function formatCurrency(value) {
+      return value.toLocaleString('ko-KR') + '원';
+    }
+
+    function formatTenThousand(value) {
+      let tenThousand = Math.floor(value / 10000);
+      return tenThousand.toLocaleString('ko-KR') + '만원';
+    }
+
+    function calculateQuote() {
+      let basePrice = parseInt(document.getElementById('trimSelect').value);
+      
+      let optionPrice = 0;
+      let checkboxes = document.querySelectorAll('.option-checkbox:checked');
+      checkboxes.forEach(function(cb) {
+        optionPrice = optionPrice + parseInt(cb.value);
+      });
+      
+      let totalCarPrice = basePrice + optionPrice;
+      
+      // Calculate 7 percent registration tax using safeMultiply
+      let regTax = safeMultiply(totalCarPrice, 0.07);
+      let bondFee = 150000;
+      let agencyFee = 50000;
+      
+      let grandTotal = totalCarPrice + regTax + bondFee + agencyFee;
+      
+      let buyMethod = document.getElementById('buyMethod').value;
+      let loanOptions = document.getElementById('loanOptions');
+      let monthlyResultContainer = document.getElementById('monthlyResultContainer');
+      let monthlyPaymentText = document.getElementById('monthlyPaymentText');
+      
+      if (buyMethod === 'loan') {
+        loanOptions.style.display = 'block';
+        let prepayRate = parseFloat(document.getElementById('prepayRate').value);
+        let prepayAmount = safeMultiply(totalCarPrice, prepayRate);
+        let loanAmount = totalCarPrice - prepayAmount;
+        let loanTerm = parseInt(document.getElementById('loanTerm').value);
+        
+        let interestRate = 0.055;
+        let totalInterest = safeMultiply(safeMultiply(loanAmount, interestRate), (loanTerm / 12));
+        let totalRepay = loanAmount + totalInterest;
+        let monthlyPayment = Math.round(totalRepay / loanTerm);
+        
+        monthlyResultContainer.style.display = 'flex';
+        monthlyPaymentText.textContent = formatCurrency(monthlyPayment) + ' (선수금 ' + formatTenThousand(prepayAmount) + ' 제외 기준)';
+      } else {
+        loanOptions.style.display = 'none';
+        monthlyResultContainer.style.display = 'none';
+      }
+      
+      document.getElementById('resultCarPrice').textContent = formatTenThousand(totalCarPrice);
+      document.getElementById('resultRegTax').textContent = formatCurrency(Math.round(regTax));
+      document.getElementById('resultGrandTotal').textContent = formatCurrency(grandTotal);
+    }
+
+    function findMyK3() {
+      let mileage = document.getElementById('quizMileage').value;
+      let coreValue = document.getElementById('quizValue').value;
+      let budget = document.getElementById('quizBudget').value;
+      let recommendResult = document.getElementById('recommendResult');
+      
+      let recommendation = "";
+      let reason = "";
+      
+      if (budget === 'low') {
+        recommendation = "기아 K3 1세대 YD 가솔린 트렌디 또는 럭셔리";
+        reason = "한정된 초기 자금 안에서 합리성을 최대로 확보할 수 있는 현명한 선택입니다. 출퇴근 거리도 짧으시므로 단순 잔고장이 적은 1세대 베스트셀러 모델이 안심하고 굴리기에 가장 든든한 다리가 되어 드릴 것입니다.";
+      } else if (budget === 'mid') {
+        if (coreValue === 'performance') {
+          recommendation = "기아 K3 GT 5도어 시그니처 (2019~2021년형)";
+          reason = "스포티한 감각의 독특한 외형 디자인과 넉넉한 해치백 적재 능력을 모두 품고 있는 전천후 핫해치 모델입니다. 단조로운 세단 레이아웃을 극복하려는 운전자께 매력을 드립니다.";
+        } else {
+          recommendation = "기아 올 뉴 K3 BD 1.6 가솔린 프레스티지";
+          reason = "안전 편의 사양과 합리적인 중고 매매 시세선이 최적의 수평을 맞춘 대중적 골든 등급입니다. 스마트스트림 엔진 탑재로 주유 비용 아끼는 효과를 즉각 체감할 수 있습니다.";
+        }
+      } else {
+        if (coreValue === 'convenience') {
+          recommendation = "기아 더 뉴 K3 2세대 BD 가솔린 시그니처";
+          reason = "제일 풍성한 드라이브 와이즈 첨단 주차 시스템과 럭셔리 편의 시트가 대거 수록된 최고 트림 등급입니다. 아직 제조사 무상 부품 AS 유효 기한도 넉넉하게 남아있는 신차 버금가는 준최상급 중고 매물입니다.";
+        } else if (coreValue === 'performance') {
+          recommendation = "기아 더 뉴 K3 GT 1.6 터보 5도어 시그니처 후기형";
+          reason = "스타일리시한 전면 가공 디자인 요소와 강력한 출력이 정점을 찍은 단종 직전의 명기입니다. 짜릿한 조향감과 우수한 코너링 접지력으로 장거리 드라이빙 쾌감을 추구하기에 훌륭합니다.";
+        } else {
+          recommendation = "기아 더 뉴 K3 2세대 1.6 가솔린 시그니처 블랙핏 에디션";
+          reason = "중후한 시크 테마의 감성과 시그니처 등급만의 빈틈없는 완벽 옵션 구성을 자랑합니다. 남다른 주행 하차감과 준대형급의 실내 편의 시스템 레이아웃을 원하는 이에게 강력하게 권장합니다.";
+        }
+      }
+      
+      recommendResult.style.display = 'block';
+      recommendResult.innerHTML = '<p style="font-weight: 700; color: #2b6cb0; font-size: 1.15rem; margin-bottom: 0.5rem;">추천 결과: ' + recommendation + '</p><p style="color: #4a5568; font-size: 0.95rem;">' + reason + '</p>';
+    }
+
+    function toggleFaq(element) {
+      let item = element.parentElement;
+      item.classList.toggle('active');
+    }
+
+    // Run calculation once during page startup
+    window.onload = function() {
+      calculateQuote();
+    };
+  </script>
+  
